@@ -1,0 +1,8 @@
+<thf-page-login
+	t-hide-remember-user="true"
+	[t-literals]="literals"
+	t-login-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+	(t-login-submit)="fazerLogin($event)"
+	(t-password-change)="limparErro()"
+	[t-password-errors]="passwordErrors">
+</thf-page-login>
