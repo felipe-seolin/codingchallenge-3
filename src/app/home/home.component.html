@@ -1,5 +1,34 @@
-<thf-page-default t-title="Home">
+<thf-page-default>
+	<div>
+		<thf-container class="thf-lg-12">
+			<div class="thf-row">
 
-  <p> Home page </p>
+				<div class="thf-xl-2 thf-lg-2 thf-md-12 thf-sm-12">
+					<thf-avatar t-size="lg" [t-src]="image"></thf-avatar>
+				</div>
 
+				<div class="thf-xl-10 thf-lg-10 thf-md-10 thf-sm-10">
+					<div class="thf-row">
+						<div class="thf-xl-12 thf-lg-12 thf-md-12 thf-sm-12">
+							<thf-input class="thf-md-12" t-label="Nome" name="name" id="name" [(ngModel)]="name" t-icon="thf-icon-user" [t-readonly]="!allowEdit" t-required="true"></thf-input>
+						</div>
+					</div>
+
+					<div *ngIf="allowEdit" class="thf-row">
+						<div class="thf-xl-6 thf-lg-6 thf-md-6 thf-sm-6">
+							<thf-button *ngIf="allowEdit" class="thf-md-6" t-label="Salvar" t-type="primary" t-icon="thf-icon thf-icon-ok" (t-click)="salvarNome()"></thf-button>
+							<thf-button *ngIf="allowEdit" class="thf-md-6" t-label="Cancelar" t-type="danger" t-icon="thf-icon thf-icon-delete" (t-click)="cancelarNome()"></thf-button>
+						</div>
+					</div>
+
+					<div *ngIf="!allowEdit" class="thf-row">
+						<div class="thf-xl-6 thf-lg-6 thf-md-6 thf-sm-6">
+							<thf-button class="thf-md-6" t-label="Editar" t-icon="thf-icon thf-icon-edit" (t-click)="editarNome()"></thf-button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</thf-container>
+	</div>
 </thf-page-default>

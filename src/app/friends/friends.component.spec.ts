@@ -3,15 +3,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { ThfPageModule } from '@totvs/thf-ui';
 
-import { UsersComponent } from './users.component';
+import { FriendsComponent } from './friends.component';
 
-describe('UsersComponent', () => {
-  let component: UsersComponent;
-  let fixture: ComponentFixture<UsersComponent>;
+describe('FriendsComponent', () => {
+  let component: FriendsComponent;
+  let fixture: ComponentFixture<FriendsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersComponent ],
+      declarations: [ FriendsComponent ],
       imports: [
         RouterTestingModule.withRoutes([]),
         ThfPageModule
@@ -21,7 +21,7 @@ describe('UsersComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UsersComponent);
+    fixture = TestBed.createComponent(FriendsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

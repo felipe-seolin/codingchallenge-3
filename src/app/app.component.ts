@@ -16,8 +16,8 @@ export class AppComponent {
   constructor(private authService: AuthService) {}
 
   readonly menus: Array<ThfMenuItem> = [
-    { label: 'Home', link: '/home' },
-    { label: 'Users', link: '/users' },
+    { label: 'Meu Perfil', link: '/home' },
+    { label: 'Amigos', link: '/friends' },
   ];
 
   ngOnInit(){
